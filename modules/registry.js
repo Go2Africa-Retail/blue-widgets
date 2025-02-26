@@ -1,4 +1,5 @@
-import getData from './getData'
+/** @type {() => void} */
+import { getData } from './getData'
 import { rafPromise } from './raf'
 
 export const registry = new WeakMap()

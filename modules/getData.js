@@ -40,7 +40,12 @@ function toUpperCase (n0) {
   return n0.charAt(1).toUpperCase()
 }
 
-export default function getData (el) {
+/**
+ * Function to get data from an element.
+ * @param {HTMLElement} el - The DOM element to get data from.
+ * @returns {Object} - The data extracted from the element.
+ */
+export function getData(el) {
   if (!el.dataset) {
     var map = {}
     var attributes = el.attributes
@@ -67,3 +72,5 @@ export default function getData (el) {
     return castObject(el.dataset)
   }
 }
+
+export default getData

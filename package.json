@@ -6,11 +6,11 @@
     "dist"
   ],
   "main": "dist/blue-widgets.js",
-  "umd:main": "dist/blue-widgets.umd.js",
   "module": "dist/blue-widgets.mjs",
+  "types": "dist/blue-widgets.d.ts",
   "source": "modules/index.js",
   "scripts": {
-    "build": "microbundle --name blueWidgets",
+    "build": "microbundle --name blueWidgets && tsc",
     "dev": "microbundle watch",
     "coverage-ci": "nyc --reporter=text-lcov npm test > coverage.lcov",
     "coverage": "nyc npm test",
@@ -52,7 +52,13 @@
     "microbundle": "^0.15.1",
     "mocha": "^6.0.0",
     "mocha-jsdom": "^2.0.0",
-    "nyc": "^13.3.0"
+    "nyc": "^13.3.0",
+    "typescript": "^5.7.3"
   },
-  "dependencies": {}
+  "exports": {
+    ".": {
+      "import": "./dist/blue-widgets.mjs",
+      "require": "./dist/blue-widgets.js"
+    }
+  }
 }
