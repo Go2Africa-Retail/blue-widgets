@@ -54,12 +54,5 @@
     "mocha-jsdom": "^2.0.0",
     "nyc": "^13.3.0"
   },
-  "dependencies": {},
-  "exports": {
-    ".": {
-      "require": "./dist/blue-widgets.js",
-      "import": "./dist/blue-widgets.mjs",
-      "default": "./dist/blue-widgets.umd.js"
-    }
-  }
+  "dependencies": {}
 }
